@@ -54,9 +54,11 @@ body {
 }
 
 .display {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
     width: 55mm;
     height: 1.5lh;
-    padding: 0.25rem 0.5rem;
+    padding: 0.1rem 0.5rem;
     position: relative;
     top: 65%;
     left: 50%;
