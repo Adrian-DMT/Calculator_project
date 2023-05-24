@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" defer src="index.js"></script>
+
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top"></div>
+        <h3 class="name">TI-<strong>30 ECO</strong> RS</h3>
+        <div class="screen">
+            <label for="device-width"></label>
+            <input class="display" type="text" id="display" name="display" value="">
+        </div>
+        <div class="logo">
+            <img class="logo" src="/images/logo.png" alt="logo">
+            <button class="start_btn function_btn btn" id="On/Off" value="On/Off"
+                onClick="calc(document.getElementById('On/Off').id)">On/Off</button>
+        </div>
+
+        <div class="keys">
+            <div class="cols">
+                <div class="key">
+                    <label style="opacity:0;" for="">none</label>
+                    <button class="btn function_btn nr">2nd</button>
+                </div>
+                <div class="key">
+                    <label for="">K></label>
+                    <button class="btn function_btn">HYP</button>
+                </div>
+                <div class="key">
+                    <label for="">x>y</label>
+                    <button class="btn function_btn" id="π" value="π"
+                        onClick="calc(document.getElementById('π').id)">π</button>
+                </div>
+                <div class="key">
+                    <label for="">Σ-</label>
+                    <button class="btn function_btn">Σ+</button>
+                </div>
+                <div class="key">
+                    <label for="">EXC</label>
+                    <button class="btn function_btn">STO</button>
+                </div>
+                <div class="key">
+                    <label for="">SUM</label>
+                    <button class="btn function_btn">RCL</button>
+                </div>
+                <div class="key">
+                    <label for=""> d/c</label>
+                    <button class="btn function_btn">a<span
+                            style="font-size:x-small; vertical-align:text-top;">b/c</span></button>
+                </div>
+                <div class="key">
+                    <label for="">F<->D</label>
+                    <button class="btn function_btn"><i class="fa-solid fa-left-long"></i></button>
+                </div>
+            </div>
+
+            <div class="cols">
+                <div class="key">
+                    <label for="">DRG></label>
+                    <button class="btn function_btn">DRG</button>
+                </div>
+                <div class="key">
+                    <label for="">SIN<span style="font-size:7px; vertical-align:text-top;">-1</span></label>
+                    <button class="btn function_btn" id="SIN" value="SIN"
+                        onClick="calc(document.getElementById('SIN').id)">SIN</button>
+                </div>
+                <div class="key">
+                    <label for="">FRQ</label>
+                    <button class="btn function_btn" id="1/x" value="1/x"
+                        onClick="calc(document.getElementById('1/x').id)">1/x</button>
+                </div>
+                <div class="key">
+                    <label for="">n</label>
+                    <button class="btn function_btn">EE</button>
+                </div>
+                <div class="key">
+                    <label for="">CSR</label>
+                    <button class="btn function_btn nr" id="7" value="7"
+                        onClick="calc(document.getElementById('7').id)">7</button>
+                </div>
+                <div class="key">
+                    <label for="">FLO</label>
+                    <button class="btn function_btn nr" id="4" value="4"
+                        onClick="calc(document.getElementById('4').id)">4</button>
+                </div>
+                <div class="key op_key" style="display: flex;">
+                    <label for="">X<span style="font-size:7px; vertical-align:text-top;">3</span></label>
+                    <button class="btn function_btn nr" id="1" value="1"
+                        onClick="calc(document.getElementById('1').id)">1</button>
+                </div>
+                <div class="key">
+                    <label for=""><span style="font-size:7px; vertical-align:text-top;">3</span>√x</label>
+                    <button class="btn function_btn nr" id="0" value="0"
+                        onClick="calc(document.getElementById('0').id)">0</button>
+                </div>
+            </div>
+
+            <div class="cols">
+                <div class="key">
+                    <label for="">10<span style="font-size:7px; vertical-align:text-top;">x</span></label>
+                    <button class="btn function_btn">LOG</button>
+                </div>
+                <div class="key">
+                    <label for="">COS<span style="font-size:7px; vertical-align:text-top;">-1</span></label>
+                    <button class="btn function_btn" id="COS" value="COS"
+                        onClick="calc(document.getElementById('COS').id)">COS</button>
+                </div>
+                <div class="key">
+                    <label for="" style="text-decoration:underline; text-underline-offset:-7px;">x</label>
+                    <button class="btn function_btn" id="x2" value="x2"
+                        onClick="calc(document.getElementById('x2').id)">x<span
+                            style="font-size:7px; vertical-align:text-top;">2</span></button>
+                </div>
+                <div class="key op_key">
+                    <label for="">Σx</label>
+                    <button class="btn function_btn">(</button>
+                </div>
+                <div class="key">
+                    <label for="">nCr</label>
+                    <button class="btn function_btn nr" id="8" value="8"
+                        onClick="calc(document.getElementById('8').id)">8</button>
+                </div>
+                <div class="key">
+                    <label for="">SCI</label>
+                    <button class="btn function_btn nr" id="5" value="5"
+                        onClick="calc(document.getElementById('5').id)">5</button>
+                </div>
+                <div class="key">
+                    <label for="">%</label>
+                    <button class="btn function_btn nr" id="2" value="2"
+                        onClick="calc(document.getElementById('2').id)">2</button>
+                </div>
+                <div class="key">
+                    <label for="">FIX</label>
+                    <button class="btn function_btn nr" style="font-weight: 900; vertical-align:text-top" id="."
+                        value="." onClick="calc(document.getElementById('.').id)">.</button>
+                </div>
+            </div>
+
+            <div class="cols">
+                <div class="key op_key">
+                    <label for="">e<span style="font-size:7px; vertical-align:text-top;">x</span></label>
+                    <button class="btn function_btn" id="LN" value="LN"
+                        onClick="calc(document.getElementById('LN').id)">LN</button>
+                </div>
+                <div class="key">
+                    <label for="">TAN<span style="font-size:7px; vertical-align:text-top;">-1</span></label>
+                    <button class="btn function_btn" id="TAN" value="TAN"
+                        onClick="calc(document.getElementById('TAN').id)">TAN</button>
+                </div>
+                <div class="key">
+                    <label for="">σ<span style="font-size:7px;">xn-1</span></label>
+                    <button class="btn function_btn" id="√x" value="√x"
+                        onClick="calc(document.getElementById('√x').id)">√x</button>
+                </div>
+                <div class="key">
+                    <label for="">Σx<span style="font-size:7px; vertical-align:text-top;">2</span></label>
+                    <button class="btn function_btn">)</button>
+                </div>
+                <div class="key">
+                    <label for="">nPr</label>
+                    <button class="btn function_btn nr" id="9" value="9"
+                        onClick="calc(document.getElementById('9').id)">9</button>
+                </div>
+                <div class="key op_key">
+                    <label for="">ENG</label>
+                    <button class="btn function_btn nr" id="6" value="6"
+                        onClick="calc(document.getElementById('6').id)">6</button>
+                </div>
+                <div class="key">
+                    <label for="">x!</label>
+                    <button class="btn function_btn nr" id="3" value="3"
+                        onClick="calc(document.getElementById('3').id)">3</button>
+                </div>
+                <div class="key">
+                    <label for="" style="opacity:0;">txt</label>
+                    <button class="btn function_btn nr" id="+/-" value="+/-"
+                        onClick="calc(document.getElementById('+/-').id)">+/-</button>
+                </div>
+            </div>
+
+            <div style="display:flex;flex-direction: column;justify-content:space-between;"">
+                <div class=" key">
+                <label for="" style="opacity:0;">txt</label>
+                <button class="btn function_btn" id="CE/C" value="CE/C"
+                    onClick="calc(document.getElementById('CE/C').id)">CE/C</button>
+            </div>
+            <div class="key">
+                <label for=""><span style="font-size:7px; vertical-align:text-top;">x</span>√y</label>
+                <button class="btn function_btn">y<span
+                        style="font-size:7px; vertical-align:text-top;">x</span></button>
+            </div>
+            <div class="key op_key">
+                <label for="">σ<span style="font-size:7px;">n-1</span></label>
+                <button class="btn operator_btn"><span style="font-size:x-large;" id="÷" value="÷"
+                        onClick="calc(document.getElementById('÷').id)">÷</span></button>
+            </div>
+            <div class="key">
+                <label for="">P>R</label>
+                <button class="btn operator_btn" id="x" value="x" onClick="calc(document.getElementById('x').id)"><span
+                        style="font-size:large">x</span></button>
+            </div>
+            <div class="key">
+                <label for="">R>P</label>
+                <button class="btn operator_btn" id="-" value="-" onClick="calc(document.getElementById('-').id)"><span
+                        style="font-size:x-large">-</span></button>
+            </div>
+            <div class="key">
+                <label for="">DMS>DD</label>
+                <button class="btn operator_btn" id="+" value="+" onClick="calc(document.getElementById('+').id)"><span
+                        style="font-size:x-large">+</span></button>
+            </div>
+            <div class="key">
+                <label for="">DD>DMS</label>
+                <button class="btn operator_btn" id="=" value="=" onClick="calc(document.getElementById('=').id)"><span
+                        style="font-size:x-large">=</span></button>
+            </div>
+        </div>
+
+        <!-- <div class="key">
+                <label for="">txt</label>
+                <button class="btn function_btn">txt</button>
+            </div> -->
+
+    </div>
+
+    <div class="footer"></div>
+    </div>
+</body>
+
+</html>
